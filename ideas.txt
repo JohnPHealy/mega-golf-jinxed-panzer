@@ -1,0 +1,5 @@
+tweak friction etc
+make different prefabs for diff shi (phys mats etc)
+obstacles: holes to fall through, moving vlouds, skyscrapers
+get all levels done by wednesday 17 and review, do brief on the following thursday
+get textures & assets (credited!) to enhance the level
