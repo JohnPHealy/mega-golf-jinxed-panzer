@@ -4,3 +4,5 @@ obstacles: holes to fall through, moving vlouds, skyscrapers, floating islands
 ,plane in the sky, air balloon in sky, ufo off in the distance
 get all levels done by wednesday 17 and review, do brief on the following thursday
 get textures & assets (credited!) to enhance the level
+nice calm music
+https://assetstore.unity.com/packages/vfx/shaders/free-skybox-extended-shader-107400
