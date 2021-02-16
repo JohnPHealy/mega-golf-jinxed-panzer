@@ -126,10 +126,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c05e18956238a77408b94fb42c753bed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shotPower: 5
-  maxForce: 5
+  shotPower: 7
+  maxForce: 8
   minSpeed: 0.6
   myLR: {fileID: 7737572343304792929}
+  shotTaken:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &9066062088641920023
 GameObject:
   m_ObjectHideFlags: 0
