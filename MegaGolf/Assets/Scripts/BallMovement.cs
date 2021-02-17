@@ -1,5 +1,7 @@
 using System;
 using UnityEngine;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine.Events;
 
 public class BallMovement : MonoBehaviour
@@ -8,12 +10,14 @@ public class BallMovement : MonoBehaviour
     [SerializeField] private LineRenderer myLR;
     [SerializeField] private UnityEvent<string> shotTaken;
 
-    private Rigidbody myRB;
+    Rigidbody myRB;
     private float shotForce;
     private Vector3 startPos, endPos, direction;
     private bool canShoot, shotStarted;
     private int strokes;
-    
+    public bool inWindZone = false;
+    public GameObject windZone;
+
 
     private void Start()
     {
@@ -49,6 +53,8 @@ public class BallMovement : MonoBehaviour
         }
     }
 
+
+
     private void FixedUpdate()
     {
         if (!canShoot)
@@ -62,9 +68,28 @@ public class BallMovement : MonoBehaviour
         {
             canShoot = true;
         }
+        if (inWindZone)
+        {
+            myRB.AddForce(windZone.GetComponent<WindArea>().direction * windZone.GetComponent<WindArea>().strength);
+
+        }
     }
 
-    private Vector3 MousePositionInWorld()
+
+        void OnTriggerEnter(Collider coll) {
+            if(coll.gameObject.tag == "windArea") {
+                windZone = coll.gameObject;
+                inWindZone = true;
+            }
+        }
+
+        void OnTriggerExit(Collider coll) {
+            if(coll.gameObject.tag == "windArea") {
+                inWindZone = false;
+            }
+        }
+
+        private Vector3 MousePositionInWorld()
     {
         Vector3 position = Vector3.zero;
         var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
