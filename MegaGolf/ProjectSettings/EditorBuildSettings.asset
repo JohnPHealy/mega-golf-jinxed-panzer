@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level 2 (Jaga W).unity
     guid: 1df460c7c074c5d4f8b412b5436c5bf6
+  - enabled: 1
+    path: Assets/Scenes/Level 4 (Jaga W).unity
+    guid: 5477d9ddf78952c41aa319afab162c4b
   m_configObjects: {}
