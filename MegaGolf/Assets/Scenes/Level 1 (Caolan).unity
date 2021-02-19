@@ -19758,7 +19758,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 5002050728146203984, guid: 4e48ba1a3ec5ef64facbf31b16fa8e01, type: 3}
       propertyPath: m_ClearFlags
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5002050728146203984, guid: 4e48ba1a3ec5ef64facbf31b16fa8e01, type: 3}
       propertyPath: orthographic size
